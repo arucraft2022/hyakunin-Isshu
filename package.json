@@ -1,0 +1,33 @@
+{
+  "name": "hyakunin-isshu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "bin": {
+    "hyakunin-isshu": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && node add-shebang.js",
+    "start": "npx ts-node src/index.ts"
+  },
+  "keywords": [
+    "hyakunin-isshu",
+    "百人一首",
+    "日本語"
+  ],
+  "author": "arucraft2022",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arucraft2022/hyakunin-isshu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arucraft2022/hyakunin-isshu/issues"
+  },
+  "homepage": "https://github.com/arucraft2022/hyakunin-isshu#readme",
+  "devDependencies": {
+    "typescript": "^4.0.0",
+    "ts-node": "^9.0.0",
+    "@types/node": "^14.0.0"
+  }
+}

@@ -1,0 +1,1016 @@
+export type HyakuninIsshu = {
+  bodyKana: string;
+  bodyKanji: string;
+  imageURL: string;
+  imageWref: string;
+  kimariji: string;
+  nameKana: string;
+  nameKanji: string;
+  no: number;
+};
+
+
+const hyakuninIsshuData: HyakuninIsshu[] = [
+  {
+    "bodyKana": "あきのたの かりほのいほの とまをあらみ わがころもでは つゆにぬれつつ",
+    "bodyKanji": "秋の田の かりほの庵の 苫をあらみ 我が衣手は 露にぬれつつ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/0/04/Hyakuninisshu_001.jpg",
+    "imageWref": "Hyakuninisshu_001.jpg",
+    "kimariji": "あきの",
+    "nameKana": "てんじてんのう",
+    "nameKanji": "天智天皇",
+    "no": 1
+  },
+  {
+    "bodyKana": "はるすぎて なつきにけらし しろたへの ころもほすてふ あまのかぐやま",
+    "bodyKanji": "春過ぎて 夏来にけらし 白妙の 衣ほすてふ 天の香具山",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/9/95/Hyakuninisshu_002.jpg",
+    "imageWref": "Hyakuninisshu_002.jpg",
+    "kimariji": "はるす",
+    "nameKana": "じとうてんのう",
+    "nameKanji": "持統天皇",
+    "no": 2
+  },
+  {
+    "bodyKana": "あしびきの やまどりのをの しだりをの ながながしよを ひとりかもねむ",
+    "bodyKanji": "あしびきの 山鳥の尾の しだり尾の ながながし夜を ひとりかも寝む",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/f/f6/Hyakuninisshu_003.jpg",
+    "imageWref": "Hyakuninisshu_003.jpg",
+    "kimariji": "あし",
+    "nameKana": "かきのもとのひとまろ",
+    "nameKanji": "柿本人麻呂",
+    "no": 3
+  },
+  {
+    "bodyKana": "たごのうらに うちいでてみれば しろたへの ふじのたかねに ゆきはふりつつ",
+    "bodyKanji": "田子の浦に うちいでてみれば 白妙の 富士の高嶺に 雪は降りつつ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/3/37/Hyakuninisshu_004.jpg",
+    "imageWref": "Hyakuninisshu_004.jpg",
+    "kimariji": "たご",
+    "nameKana": "やまべのあかひと",
+    "nameKanji": "山部赤人",
+    "no": 4
+  },
+  {
+    "bodyKana": "おくやまに もみぢふみわけ なくしかの こゑきくときぞ あきはかなしき",
+    "bodyKanji": "奥山に もみぢふみわけ なく鹿の 声聞く時ぞ 秋はかなしき",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/c/cd/Hyakuninisshu_005.jpg",
+    "imageWref": "Hyakuninisshu_005.jpg",
+    "kimariji": "おく",
+    "nameKana": "さるまるだゆう",
+    "nameKanji": "猿丸太夫",
+    "no": 5
+  },
+  {
+    "bodyKana": "かささぎの わたせるはしに おくしもの しろきをみれば よぞふけにける",
+    "bodyKanji": "かささぎの 渡せる橋に おく霜の 白きをみれば 夜ぞふけにける",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/f/fe/Hyakuninisshu_006.jpg",
+    "imageWref": "Hyakuninisshu_006.jpg",
+    "kimariji": "かさ",
+    "nameKana": "ちゅうなごんやかもち",
+    "nameKanji": "中納言家持",
+    "no": 6
+  },
+  {
+    "bodyKana": "あまのはら ふりさけみれば かすがなる みかさのやまに いでしつきかも",
+    "bodyKanji": "天の原 ふりさけみれば 春日なる 三笠の山に いでし月かも",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/4/46/Hyakuninisshu_007.jpg",
+    "imageWref": "Hyakuninisshu_007.jpg",
+    "kimariji": "あまの",
+    "nameKana": "あべのなかまろ",
+    "nameKanji": "阿倍仲麻呂",
+    "no": 7
+  },
+  {
+    "bodyKana": "わがいほは みやこのたつみ しかぞすむ よをうぢやまと ひとはいふなり",
+    "bodyKanji": "わが庵は 都のたつみ しかぞすむ 世をうぢ山と 人はいふなり",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/d0/Hyakuninisshu_008.jpg",
+    "imageWref": "Hyakuninisshu_008.jpg",
+    "kimariji": "わがい",
+    "nameKana": "きせんほうし",
+    "nameKanji": "喜撰法師",
+    "no": 8
+  },
+  {
+    "bodyKana": "はなのいろは うつりにけりな いたづらに わがみよにふる ながめせしまに",
+    "bodyKanji": "花の色は うつりにけりな いたづらに わが身よにふる ながめせしまに",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/9/94/Hyakuninisshu_009.jpg",
+    "imageWref": "Hyakuninisshu_009.jpg",
+    "kimariji": "はなの",
+    "nameKana": "おののこまち",
+    "nameKanji": "小野小町",
+    "no": 9
+  },
+  {
+    "bodyKana": "これやこの ゆくもかへるも わかれては しるもしらぬも あふさかのせき",
+    "bodyKanji": "これやこの 行くも帰るも わかれては しるもしらぬも 逢坂の関",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/2/29/Hyakuninisshu_010.jpg",
+    "imageWref": "Hyakuninisshu_010.jpg",
+    "kimariji": "これ",
+    "nameKana": "せみまる",
+    "nameKanji": "蝉丸",
+    "no": 10
+  },
+  {
+    "bodyKana": "わたのはら やそしまかけて こぎいでぬと ひとにはつげよ あまのつりぶね",
+    "bodyKanji": "わたの原 八十島かけて こぎいでぬと 人にはつげよ あまのつり舟",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/7/7e/Hyakuninisshu_011.jpg",
+    "imageWref": "Hyakuninisshu_011.jpg",
+    "kimariji": "わたのはら や",
+    "nameKana": "さんぎたかむら",
+    "nameKanji": "参議篁",
+    "no": 11
+  },
+  {
+    "bodyKana": "あまつかぜ くものかよひぢ ふきとぢよ をとめのすがた しばしとどめむ",
+    "bodyKanji": "天つ風 雲のかよひ路 吹きとぢよ をとめの姿 しばしとどめむ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/b/b4/Hyakuninisshu_012.jpg",
+    "imageWref": "Hyakuninisshu_012.jpg",
+    "kimariji": "あまつ",
+    "nameKana": "そうじょうへんじょう",
+    "nameKanji": "僧正遍昭",
+    "no": 12
+  },
+  {
+    "bodyKana": "つくばねの みねよりおつる みなのがは こひぞつもりて ふちとなりぬる",
+    "bodyKanji": "つくばねの 峰よりおつる みなの川 恋ぞつもりて 淵となりぬる",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/8/85/Hyakuninisshu_013.jpg",
+    "imageWref": "Hyakuninisshu_013.jpg",
+    "kimariji": "つく",
+    "nameKana": "ようぜいいん",
+    "nameKanji": "陽成院",
+    "no": 13
+  },
+  {
+    "bodyKana": "みちのくの しのぶもぢずり たれゆゑに みだれそめにし われならなくに",
+    "bodyKanji": "みちのくの しのぶもぢずり 誰ゆゑに みだれそめにし 我ならなくに",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/9/94/Hyakuninisshu_014.jpg",
+    "imageWref": "Hyakuninisshu_014.jpg",
+    "kimariji": "みち",
+    "nameKana": "かわらのさだいじん",
+    "nameKanji": "河原左大臣",
+    "no": 14
+  },
+  {
+    "bodyKana": "きみがため はるののにいでて わかなつむ わがころもでに ゆきはふりつつ",
+    "bodyKanji": "君がため 春の野に出でて 若菜つむ わが衣手に 雪はふりつつ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/0/05/Hyakuninisshu_015.jpg",
+    "imageWref": "Hyakuninisshu_015.jpg",
+    "kimariji": "きみがため は",
+    "nameKana": "こうこうてんのう",
+    "nameKanji": "光孝天皇",
+    "no": 15
+  },
+  {
+    "bodyKana": "たちわかれ いなばのやまの みねにおふる まつとしきかば いまかへりこむ",
+    "bodyKanji": "立ちわかれ いなばの山の 峰に生ふる まつとし聞かば いまかへりこむ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/8/8b/Hyakuninisshu_016.jpg",
+    "imageWref": "Hyakuninisshu_016.jpg",
+    "kimariji": "たち",
+    "nameKana": "ちゅうなごんゆきひら",
+    "nameKanji": "中納言行平",
+    "no": 16
+  },
+  {
+    "bodyKana": "ちはやぶる かみよもきかず たつたがは からくれなゐに みづくくるとは",
+    "bodyKanji": "ちはやぶる 神代もきかず 竜田川 からくれなゐに 水くくるとは",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/2/2c/Hyakuninisshu_017.jpg",
+    "imageWref": "Hyakuninisshu_017.jpg",
+    "kimariji": "ちは",
+    "nameKana": "ありわらのなりひらあそん",
+    "nameKanji": "在原業平朝臣",
+    "no": 17
+  },
+  {
+    "bodyKana": "すみのえの きしによるなみ よるさへや ゆめのかよひぢ ひとめよくらむ",
+    "bodyKanji": "住の江の 岸による波 よるさへや 夢のかよひ路 人目よくらむ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/c/c6/Hyakuninisshu_018.jpg",
+    "imageWref": "Hyakuninisshu_018.jpg",
+    "kimariji": "す",
+    "nameKana": "ふじわらのとしゆきあそん",
+    "nameKanji": "藤原敏行朝臣",
+    "no": 18
+  },
+  {
+    "bodyKana": "なにはがた みじかきあしの ふしのまも あはでこのよを すぐしてよとや",
+    "bodyKanji": "難波潟 みじかき蘆の ふしのまも あはでこの世を すぐしてよとや",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/8/85/Hyakuninisshu_019.jpg",
+    "imageWref": "Hyakuninisshu_019.jpg",
+    "kimariji": "なにはが",
+    "nameKana": "いせ",
+    "nameKanji": "伊勢",
+    "no": 19
+  },
+  {
+    "bodyKana": "わびぬれば いまはたおなじ なにはなる みをつくしても あはむとぞおもふ",
+    "bodyKanji": "わびぬれば いまはたおなじ 難波なる 身をつくしても あはむとぞ思ふ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/9/97/Hyakuninisshu_020.jpg",
+    "imageWref": "Hyakuninisshu_020.jpg",
+    "kimariji": "わび",
+    "nameKana": "もとよししんのう",
+    "nameKanji": "元良親王",
+    "no": 20
+  },
+  {
+    "bodyKana": "いまこむと いひしばかりに ながつきの ありあけのつきを まちいでつるかな",
+    "bodyKanji": "今こむと いひしばかりに 長月の 有明の月を まちいでつるかな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/3/3b/Hyakuninisshu_021.jpg",
+    "imageWref": "Hyakuninisshu_021.jpg",
+    "kimariji": "いまこ",
+    "nameKana": "そせいほうし",
+    "nameKanji": "素性法師",
+    "no": 21
+  },
+  {
+    "bodyKana": "ふくからに あきのくさきの しをるれば むべやまかぜを あらしといふらむ",
+    "bodyKanji": "吹くからに 秋の草木の しをるれば むべ山風を 嵐といふらむ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/1/11/Hyakuninisshu_022.jpg",
+    "imageWref": "Hyakuninisshu_022.jpg",
+    "kimariji": "ふ",
+    "nameKana": "ふんやのやすひで",
+    "nameKanji": "文屋康秀",
+    "no": 22
+  },
+  {
+    "bodyKana": "つきみれば ちぢにものこそ かなしけれ わがみひとつの あきにはあらねど",
+    "bodyKanji": "月みれば ちぢにものこそ かなしけれ わが身一つの 秋にはあらねど",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/e/e4/Hyakuninisshu_023.jpg",
+    "imageWref": "Hyakuninisshu_023.jpg",
+    "kimariji": "つき",
+    "nameKana": "おおえのちさと",
+    "nameKanji": "大江千里",
+    "no": 23
+  },
+  {
+    "bodyKana": "このたびは ぬさもとりあへず たむけやま もみぢのにしき かみのまにまに",
+    "bodyKanji": "このたびは ぬさもとりあへず 手向山 もみぢのにしき 神のまにまに",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/0/01/Hyakuninisshu_024.jpg",
+    "imageWref": "Hyakuninisshu_024.jpg",
+    "kimariji": "この",
+    "nameKana": "かんけ",
+    "nameKanji": "菅家",
+    "no": 24
+  },
+  {
+    "bodyKana": "なにしおはば あふさかやまの さねかづら ひとにしられで くるよしもがな",
+    "bodyKanji": "名にし負はば 逢坂山の さねかづら 人にしられで 来るよしもがな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/d2/Hyakuninisshu_025.jpg",
+    "imageWref": "Hyakuninisshu_025.jpg",
+    "kimariji": "なにし",
+    "nameKana": "さんじょうのうだいじん",
+    "nameKanji": "三条右大臣",
+    "no": 25
+  },
+  {
+    "bodyKana": "をぐらやま みねのもみぢば こころあらば いまひとたびの みゆきまたなむ",
+    "bodyKanji": "小倉山 峰のもみぢ葉 心あらば いまひとたびの みゆきまたなむ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/b/b4/Hyakuninisshu_026.jpg",
+    "imageWref": "Hyakuninisshu_026.jpg",
+    "kimariji": "をぐ",
+    "nameKana": "ていしんこう",
+    "nameKanji": "貞信公",
+    "no": 26
+  },
+  {
+    "bodyKana": "みかのはら わきてながるる いづみがは いつみきとてか こひしかるらむ",
+    "bodyKanji": "みかの原 わきて流るる いづみ川 いつみきとてか 恋しかるらむ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/7/7b/Hyakuninisshu_027.jpg",
+    "imageWref": "Hyakuninisshu_027.jpg",
+    "kimariji": "みかの",
+    "nameKana": "ちゅうなごんかねすけ",
+    "nameKanji": "中納言兼輔",
+    "no": 27
+  },
+  {
+    "bodyKana": "やまざとは ふゆぞさびしさ まさりける ひとめもくさも かれぬとおもへば",
+    "bodyKanji": "山里は 冬ぞさびしさ まさりける 人目も草も かれぬと思へば",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/a/af/Hyakuninisshu_028.jpg",
+    "imageWref": "Hyakuninisshu_028.jpg",
+    "kimariji": "やまざ",
+    "nameKana": "みなもとのむねゆきあそん",
+    "nameKanji": "源宗行朝臣",
+    "no": 28
+  },
+  {
+    "bodyKana": "こころあてに をらばやをらむ はつしもの おきまどはせる しらぎくのはな",
+    "bodyKanji": "心当てに 折らばや折らむ 初霜の おきまどはせる 白菊の花",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/c/cf/Hyakuninisshu_029.jpg",
+    "imageWref": "Hyakuninisshu_029.jpg",
+    "kimariji": "こころあ",
+    "nameKana": "おおしこうちのみつね",
+    "nameKanji": "凡河内躬恒",
+    "no": 29
+  },
+  {
+    "bodyKana": "ありあけの つれなくみえし わかれより あかつきばかり うきものはなし",
+    "bodyKanji": "有明の つれなく見えし 別れより あかつきばかり うきものはなし",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/8/8a/Hyakuninisshu_030.jpg",
+    "imageWref": "Hyakuninisshu_030.jpg",
+    "kimariji": "ありあ",
+    "nameKana": "みぶのただみね",
+    "nameKanji": "壬生忠岑",
+    "no": 30
+  },
+  {
+    "bodyKana": "あさぼらけ ありあけのつきと みるまでに よしののさとに ふれるしらゆき",
+    "bodyKanji": "朝ぼらけ 有明の月と見るまでに 吉野の里に 降れる白雪",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/c/ce/Hyakuninisshu_031.jpg",
+    "imageWref": "Hyakuninisshu_031.jpg",
+    "kimariji": "あさぼらけ あ",
+    "nameKana": "さかのうえのこれのり",
+    "nameKanji": "坂上是則",
+    "no": 31
+  },
+  {
+    "bodyKana": "やまがはに かぜのかけたる しがらみは ながれもあへぬ もみぢなりけり",
+    "bodyKanji": "山川に 風のかけたる しがらみは ながれもあへぬ もみぢなりけり",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/a/a6/Hyakuninisshu_032.jpg",
+    "imageWref": "Hyakuninisshu_032.jpg",
+    "kimariji": "やまが",
+    "nameKana": "はるみちのつらき",
+    "nameKanji": "春道列樹",
+    "no": 32
+  },
+  {
+    "bodyKana": "ひさかたの ひかりのどけき はるのひに しづこころなく はなのちるらむ",
+    "bodyKanji": "久方の 光のどけき 春の日に しづ心なく 花の散るらむ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/e/ef/Hyakuninisshu_033.jpg",
+    "imageWref": "Hyakuninisshu_033.jpg",
+    "kimariji": "ひさ",
+    "nameKana": "きのとものり",
+    "nameKanji": "紀友則",
+    "no": 33
+  },
+  {
+    "bodyKana": "たれをかも しるひとにせむ たかさごの まつもむかしの ともならなくに",
+    "bodyKanji": "誰をかも しる人にせむ 高砂の 松も昔の 友ならなくに",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/f/f6/Hyakuninisshu_034.jpg",
+    "imageWref": "Hyakuninisshu_034.jpg",
+    "kimariji": "たれ",
+    "nameKana": "ふじわらのおきかぜ",
+    "nameKanji": "藤原興風",
+    "no": 34
+  },
+  {
+    "bodyKana": "ひとはいさ こころもしらず ふるさとは はなぞむかしの かににほひける",
+    "bodyKanji": "人はいさ 心も知らず ふるさとは 花ぞ昔の 香に匂ひける",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/3/32/Hyakuninisshu_035.jpg",
+    "imageWref": "Hyakuninisshu_035.jpg",
+    "kimariji": "ひとは",
+    "nameKana": "きのつらゆき",
+    "nameKanji": "紀貫之",
+    "no": 35
+  },
+  {
+    "bodyKana": "なつのよは まだよひながら あけぬるを くものいづこに つきやどるらむ",
+    "bodyKanji": "夏の夜は まだ宵ながら あけぬるを 雲のいづこに 月やどるらむ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/f/f7/Hyakuninisshu_036.jpg",
+    "imageWref": "Hyakuninisshu_036.jpg",
+    "kimariji": "なつ",
+    "nameKana": "きよはらのふかやぶ",
+    "nameKanji": "清原深養父",
+    "no": 36
+  },
+  {
+    "bodyKana": "しらつゆに かぜのふきしく あきののは つらぬきとめぬ たまぞちりける",
+    "bodyKanji": "白露に 風の吹きしく 秋の野は つらぬきとめぬ 玉ぞ散りける",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/c/c5/Hyakuninisshu_037.jpg",
+    "imageWref": "Hyakuninisshu_037.jpg",
+    "kimariji": "しら",
+    "nameKana": "ふんやのあさやす",
+    "nameKanji": "文屋朝康",
+    "no": 37
+  },
+  {
+    "bodyKana": "わすらるる みをばおもはず ちかひてし ひとのいのちの をしくもあるかな",
+    "bodyKanji": "忘らるる 身をば思はず ちかひてし 人の命の 惜しくもあるかな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/a/a5/Hyakuninisshu_038.jpg",
+    "imageWref": "Hyakuninisshu_038.jpg",
+    "kimariji": "わすら",
+    "nameKana": "うこん",
+    "nameKanji": "右近",
+    "no": 38
+  },
+  {
+    "bodyKana": "あさぢふの をののしのはら しのぶれど あまりてなどか ひとのこひしき",
+    "bodyKanji": "浅茅生の 小野の篠原 しのぶれど あまりてなどか 人の恋しき",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/7/7b/Hyakuninisshu_039.jpg",
+    "imageWref": "Hyakuninisshu_039.jpg",
+    "kimariji": "あさぢ",
+    "nameKana": "さんぎひとし",
+    "nameKanji": "参議等",
+    "no": 39
+  },
+  {
+    "bodyKana": "しのぶれど いろにいでにけり わがこひは ものやおもふと ひとのとふまで",
+    "bodyKanji": "しのぶれど 色に出でにけり 我が恋は 物や思ふと 人の問ふまで",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/7/7b/Hyakuninisshu_040.jpg",
+    "imageWref": "Hyakuninisshu_040.jpg",
+    "kimariji": "しの",
+    "nameKana": "たいらのかねもり",
+    "nameKanji": "平兼盛",
+    "no": 40
+  },
+  {
+    "bodyKana": "こひすてふ わがなはまだき たちにけり ひとしれずこそ おもひそめしか",
+    "bodyKanji": "恋すてふ 我が名はまだき 立ちにけり 人しれずこそ 思ひそめしか",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/6/61/Hyakuninisshu_041.jpg",
+    "imageWref": "Hyakuninisshu_041.jpg",
+    "kimariji": "こひ",
+    "nameKana": "みぶのただみ",
+    "nameKanji": "壬生忠見",
+    "no": 41
+  },
+  {
+    "bodyKana": "ちぎりきな かたみにそでを しぼりつつ すゑのまつやま なみこさじとは",
+    "bodyKanji": "ちぎりきな かたみに袖を しぼりつつ 末の松山 波こさじとは",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/54/Hyakuninisshu_042.jpg",
+    "imageWref": "Hyakuninisshu_042.jpg",
+    "kimariji": "ちぎりき",
+    "nameKana": "きよはらのもとすけ",
+    "nameKanji": "清原元輔",
+    "no": 42
+  },
+  {
+    "bodyKana": "あひみての のちのこころに くらぶれば むかしはものを おもはざりけり",
+    "bodyKanji": "あひみての のちの心に くらぶれば 昔は物を 思はざりけり",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/2/2a/Hyakuninisshu_043.jpg",
+    "imageWref": "Hyakuninisshu_043.jpg",
+    "kimariji": "あひ",
+    "nameKana": "ごんちゅうなごんあつただ",
+    "nameKanji": "権中納言敦忠",
+    "no": 43
+  },
+  {
+    "bodyKana": "あふことの たえてしなくば なかなかに ひとをもみをも うらみざらまし",
+    "bodyKanji": "あふことの たえてしなくば なかなかに 人をも身をも 恨みざらまし",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/2/2c/Hyakuninisshu_044.jpg",
+    "imageWref": "Hyakuninisshu_044.jpg",
+    "kimariji": "あふこ",
+    "nameKana": "ちゅうなごんあさただ",
+    "nameKanji": "中納言朝忠",
+    "no": 44
+  },
+  {
+    "bodyKana": "あはれとも いふべきひとは おもほえで みのいたづらに なりぬべきかな",
+    "bodyKanji": "あはれとも いふべき人は 思ほえで 身のいたづらに なりぬべきかな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/4/40/Hyakuninisshu_045.jpg",
+    "imageWref": "Hyakuninisshu_045.jpg",
+    "kimariji": "あはれ",
+    "nameKana": "けんとくこう",
+    "nameKanji": "謙徳公",
+    "no": 45
+  },
+  {
+    "bodyKana": "ゆらのとを わたるふなびと かぢをたえ ゆくへもしらぬ こひのみちかな",
+    "bodyKanji": "由良のとを 渡る舟人 かぢをたえ ゆくへも知らぬ 恋の道かな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/5a/Hyakuninisshu_046.jpg",
+    "imageWref": "Hyakuninisshu_046.jpg",
+    "kimariji": "ゆら",
+    "nameKana": "そねのよしただ",
+    "nameKanji": "曽禰好忠",
+    "no": 46
+  },
+  {
+    "bodyKana": "やへむぐら しげれるやどの さびしきに ひとこそみえね あきはきにけり",
+    "bodyKanji": "八重むぐら しげれる宿の さびしきに 人こそ見えね 秋は来にけり",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/0/0f/Hyakuninisshu_047.jpg",
+    "imageWref": "Hyakuninisshu_047.jpg",
+    "kimariji": "やへ",
+    "nameKana": "えぎょうほうし",
+    "nameKanji": "恵慶法師",
+    "no": 47
+  },
+  {
+    "bodyKana": "かぜをいたみ いはうつなみの おのれのみ くだけてものを おもふころかな",
+    "bodyKanji": "風をいたみ 岩うつ波の おのれのみ くだけて物を 思ふころかな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/9/97/Hyakuninisshu_048.jpg",
+    "imageWref": "Hyakuninisshu_048.jpg",
+    "kimariji": "かぜを",
+    "nameKana": "みなもとのしげゆき",
+    "nameKanji": "源重之",
+    "no": 48
+  },
+  {
+    "bodyKana": "みかきもり ゑじのたくひの よるはもえ ひるはきえつつ ものをこそおもへ",
+    "bodyKanji": "みかきもり 衛士のたく火の 夜はもえ 昼は消えつつ 物をこそ思へ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/b/b8/Hyakuninisshu_049.jpg",
+    "imageWref": "Hyakuninisshu_049.jpg",
+    "kimariji": "みかき",
+    "nameKana": "おおなかとみのよしのぶあそん",
+    "nameKanji": "大中臣能宣朝臣",
+    "no": 49
+  },
+  {
+    "bodyKana": "きみがため をしからざりし いのちさへ ながくもがなと おもひけるかな",
+    "bodyKanji": "君がため 惜しからざりし いのちさへ 長くもがなと 思ひけるかな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/8/85/Hyakuninisshu_050.jpg",
+    "imageWref": "Hyakuninisshu_050.jpg",
+    "kimariji": "きみがため を",
+    "nameKana": "ふじわらのよしたか",
+    "nameKanji": "藤原義孝",
+    "no": 50
+  },
+  {
+    "bodyKana": "かくとだに えやはいぶきの さしもぐさ さしもしらじな もゆるおもひを",
+    "bodyKanji": "かくとだに えやはいぶきの さしも草 さしもしらじな もゆる思ひを",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/4/48/Hyakuninisshu_051.jpg",
+    "imageWref": "Hyakuninisshu_051.jpg",
+    "kimariji": "かく",
+    "nameKana": "ふじわらのさねかたあそん",
+    "nameKanji": "藤原実方朝臣",
+    "no": 51
+  },
+  {
+    "bodyKana": "あけぬれば くるるものとは しりながら なほうらめしき あさぼらけかな",
+    "bodyKanji": "あけぬれば 暮るるものとは 知りながら なほうらめしき 朝ぼらけかな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/0/08/Hyakuninisshu_052.jpg",
+    "imageWref": "Hyakuninisshu_052.jpg",
+    "kimariji": "あけ",
+    "nameKana": "ふじわらのみちのぶあそん",
+    "nameKanji": "藤原道信朝臣",
+    "no": 52
+  },
+  {
+    "bodyKana": "なげきつつ ひとりぬるよの あくるまは いかにひさしき ものとかはしる",
+    "bodyKanji": "なげきつつ ひとりぬる夜の あくるまは いかに久しき ものとかはしる",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/0/02/Hyakuninisshu_053.jpg",
+    "imageWref": "Hyakuninisshu_053.jpg",
+    "kimariji": "なげき",
+    "nameKana": "うだいしょうみちつなのはは",
+    "nameKanji": "右大将道綱母",
+    "no": 53
+  },
+  {
+    "bodyKana": "わすれじの ゆくすゑまでは かたければ けふをかぎりの いのちともがな",
+    "bodyKanji": "忘れじの ゆく末までは かたければ 今日をかぎりの いのちともがな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/a/a0/Hyakuninisshu_054.jpg",
+    "imageWref": "Hyakuninisshu_054.jpg",
+    "kimariji": "わすれ",
+    "nameKana": "ぎどうさんしのはは",
+    "nameKanji": "儀同三司母",
+    "no": 54
+  },
+  {
+    "bodyKana": "たきのおとは たえてひさしく なりぬれど なこそながれて なほきこえけれ",
+    "bodyKanji": "滝の音は たえて久しく なりぬれど 名こそ流れて なほ聞こえけれ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/3/31/Hyakuninisshu_055.jpg",
+    "imageWref": "Hyakuninisshu_055.jpg",
+    "kimariji": "たき",
+    "nameKana": "だいなごんきんとう",
+    "nameKanji": "大納言公任",
+    "no": 55
+  },
+  {
+    "bodyKana": "あらざらむ このよのほかの おもひでに いまひとたびの あふこともがな",
+    "bodyKanji": "あらざらむ この世のほかの 思ひ出に いまひとたびの あふこともがな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/9/99/Hyakuninisshu_056.jpg",
+    "imageWref": "Hyakuninisshu_056.jpg",
+    "kimariji": "あらざ",
+    "nameKana": "いずみしきぶ",
+    "nameKanji": "和泉式部",
+    "no": 56
+  },
+  {
+    "bodyKana": "めぐりあひて みしやそれとも わかぬまに くもがくれにし よはのつきかな",
+    "bodyKanji": "めぐりあひて 見しやそれとも わかぬまに 雲がくれにし 夜半の月かな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/1/13/Hyakuninisshu_057.jpg",
+    "imageWref": "Hyakuninisshu_057.jpg",
+    "kimariji": "め",
+    "nameKana": "むらさきしきぶ",
+    "nameKanji": "紫式部",
+    "no": 57
+  },
+  {
+    "bodyKana": "ありまやま ゐなのささはら かぜふけば いでそよひとを わすれやはする",
+    "bodyKanji": "ありま山 ゐなの笹原 風吹けば いでそよ人を 忘れやはする",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/7/71/Hyakuninisshu_058.jpg",
+    "imageWref": "Hyakuninisshu_058.jpg",
+    "kimariji": "ありま",
+    "nameKana": "だいにのさんみ",
+    "nameKanji": "大弐三位",
+    "no": 58
+  },
+  {
+    "bodyKana": "やすらはで ねなましものを さよふけて かたぶくまでの つきをみしかな",
+    "bodyKanji": "やすらはで 寝なましものを さ夜ふけて かたぶくまでの 月を見しかな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/0/0f/Hyakuninisshu_059.jpg",
+    "imageWref": "Hyakuninisshu_059.jpg",
+    "kimariji": "やす",
+    "nameKana": "あかぞめえもん",
+    "nameKanji": "赤染衛門",
+    "no": 59
+  },
+  {
+    "bodyKana": "おほえやま いくののみちの とほければ まだふみもみず あまのはしだて",
+    "bodyKanji": "大江山 いく野の道の 遠ければ まだふみもみず 天の橋立",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/a/ae/Hyakuninisshu_060.jpg",
+    "imageWref": "Hyakuninisshu_060.jpg",
+    "kimariji": "おほえ",
+    "nameKana": "こしきぶのないし",
+    "nameKanji": "小式部内侍",
+    "no": 60
+  },
+  {
+    "bodyKana": "いにしへの ならのみやこの やへざくら けふここのへに にほひぬるかな",
+    "bodyKanji": "いにしへの 奈良の都の 八重桜 けふ九重に 匂ひぬるかな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/f/fb/Hyakuninisshu_061.jpg",
+    "imageWref": "Hyakuninisshu_061.jpg",
+    "kimariji": "いに",
+    "nameKana": "いせのたいふ",
+    "nameKanji": "伊勢大輔",
+    "no": 61
+  },
+  {
+    "bodyKana": "よをこめて とりのそらねは はかるとも よにあふさかの せきはゆるさじ",
+    "bodyKanji": "夜をこめて 鳥のそらねは はかるとも よに逢坂の 関はゆるさじ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/d7/Hyakuninisshu_062.jpg",
+    "imageWref": "Hyakuninisshu_062.jpg",
+    "kimariji": "よを",
+    "nameKana": "せいしょうなごん",
+    "nameKanji": "清少納言",
+    "no": 62
+  },
+  {
+    "bodyKana": "いまはただ おもひたえなむ とばかりを ひとづてならで いふよしもがな",
+    "bodyKanji": "いまはただ 思ひ絶えなむ とばかりを 人づてならで 言ふよしもがな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/b/be/Hyakuninisshu_063.jpg",
+    "imageWref": "Hyakuninisshu_063.jpg",
+    "kimariji": "いまは",
+    "nameKana": "さきょうのだいぶみちまさ",
+    "nameKanji": "左京大夫道雅",
+    "no": 63
+  },
+  {
+    "bodyKana": "あさぼらけ うぢのかはぎり たえだえに あらはれわたる せぜのあじろぎ",
+    "bodyKanji": "朝ぼらけ 宇治の川霧 絶え絶えに あらはれわたる 瀬々の網代木",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/2/25/Hyakuninisshu_064.jpg",
+    "imageWref": "Hyakuninisshu_064.jpg",
+    "kimariji": "あさぼらけ う",
+    "nameKana": "ごんちゅうなごんさだより",
+    "nameKanji": "権中納言定頼",
+    "no": 64
+  },
+  {
+    "bodyKana": "うらみわび ほさぬそでだに あるものを こひにくちなむ なこそをしけれ",
+    "bodyKanji": "うらみわび ほさぬ袖だに あるものを 恋にくちなむ 名こそをしけれ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/51/Hyakuninisshu_065.jpg",
+    "imageWref": "Hyakuninisshu_065.jpg",
+    "kimariji": "うら",
+    "nameKana": "さがみ",
+    "nameKanji": "相模",
+    "no": 65
+  },
+  {
+    "bodyKana": "もろともに あはれとおもへ やまざくら はなよりほかに しるひともなし",
+    "bodyKanji": "もろともに あはれと思へ 山桜 花よりほかに 知る人もなし",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/2/26/Hyakuninisshu_066.jpg",
+    "imageWref": "Hyakuninisshu_066.jpg",
+    "kimariji": "もろ",
+    "nameKana": "さきのだいそうじょうぎょうそん",
+    "nameKanji": "前大僧正行尊",
+    "no": 66
+  },
+  {
+    "bodyKana": "はるのよの ゆめばかりなる たまくらに かひなくたたむ なこそをしけれ",
+    "bodyKanji": "春の夜の 夢ばかりなる 手枕に かひなくたたむ 名こそをしけれ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/9/93/Hyakuninisshu_067.jpg",
+    "imageWref": "Hyakuninisshu_067.jpg",
+    "kimariji": "はるの",
+    "nameKana": "すおうのないし",
+    "nameKanji": "周防内侍",
+    "no": 67
+  },
+  {
+    "bodyKana": "こころにも あらでうきよに ながらへば こひしかるべき よはのつきかな",
+    "bodyKanji": "心にも あらでうき世に ながらへば 恋しかるべき 夜半の月かな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/0/0e/Hyakuninisshu_068.jpg",
+    "imageWref": "Hyakuninisshu_068.jpg",
+    "kimariji": "こころに",
+    "nameKana": "さんじょういん",
+    "nameKanji": "三条院",
+    "no": 68
+  },
+  {
+    "bodyKana": "あらしふく みむろのやまの もみぢばは たつたのかはの にしきなりけり",
+    "bodyKanji": "あらし吹く み室の山の もみぢばは 竜田の川の 錦なりけり",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/d9/Hyakuninisshu_069.jpg",
+    "imageWref": "Hyakuninisshu_069.jpg",
+    "kimariji": "あらし",
+    "nameKana": "のういんほうし",
+    "nameKanji": "能因法師",
+    "no": 69
+  },
+  {
+    "bodyKana": "さびしさに やどをたちいでて ながむれば いづくもおなじ あきのゆふぐれ",
+    "bodyKanji": "さびしさに 宿を立ち出でて ながむれば いづくもおなじ 秋の夕ぐれ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/7/75/Hyakuninisshu_070.jpg",
+    "imageWref": "Hyakuninisshu_070.jpg",
+    "kimariji": "さ",
+    "nameKana": "りょうぜんほうし",
+    "nameKanji": "良選法師",
+    "no": 70
+  },
+  {
+    "bodyKana": "ゆふされば かどたのいなば おとづれて あしのまろやに あきかぜぞふく",
+    "bodyKanji": "夕されば 門田の稲葉 おとづれて 蘆のまろやに 秋風ぞ吹く",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/1/1b/Hyakuninisshu_071.jpg",
+    "imageWref": "Hyakuninisshu_071.jpg",
+    "kimariji": "ゆふ",
+    "nameKana": "だいなごんつねのぶ",
+    "nameKanji": "大納言経信",
+    "no": 71
+  },
+  {
+    "bodyKana": "おとにきく たかしのはまの あだなみは かけじやそでの ぬれもこそすれ",
+    "bodyKanji": "音に聞く 高師の浜の あだ波は かけじや袖の ぬれもこそすれ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/2/2b/Hyakuninisshu_072.jpg",
+    "imageWref": "Hyakuninisshu_072.jpg",
+    "kimariji": "おと",
+    "nameKana": "ゆうしないしんのうけのきい",
+    "nameKanji": "祐子内親王家紀伊",
+    "no": 72
+  },
+  {
+    "bodyKana": "たかさごの をのへのさくら さきにけり とやまのかすみ たたずもあらなむ",
+    "bodyKanji": "高砂の をのへのさくら さきにけり とやまのかすみ たたずもあらなむ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/a/a2/Hyakuninisshu_073.jpg",
+    "imageWref": "Hyakuninisshu_073.jpg",
+    "kimariji": "たか",
+    "nameKana": "さきのごんちゅうなごんまさふさ",
+    "nameKanji": "前権中納言匡房",
+    "no": 73
+  },
+  {
+    "bodyKana": "うかりける ひとをはつせの やまおろしよ はげしかれとは いのらぬものを",
+    "bodyKanji": "憂かりける 人を初瀬の 山おろしよ はげしかれとは 祈らぬものを",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/0/00/Hyakuninisshu_074.jpg",
+    "imageWref": "Hyakuninisshu_074.jpg",
+    "kimariji": "うか",
+    "nameKana": "みなもとのとしよりあそん",
+    "nameKanji": "源俊頼朝臣",
+    "no": 74
+  },
+  {
+    "bodyKana": "ちぎりおきし させもがつゆを いのちにて あはれことしの あきもいぬめり",
+    "bodyKanji": "ちぎりおきし させもが露を いのちにて あはれ今年の 秋もいぬめり",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/55/Hyakuninisshu_075.jpg",
+    "imageWref": "Hyakuninisshu_075.jpg",
+    "kimariji": "ちぎりお",
+    "nameKana": "ふじわらのもととし",
+    "nameKanji": "藤原基俊",
+    "no": 75
+  },
+  {
+    "bodyKana": "わたのはら こぎいでてみれば ひさかたの くもゐにまがふ おきつしらなみ",
+    "bodyKanji": "わたの原 こぎいでてみれば 久方の 雲いにまがふ 沖つ白波",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/da/Hyakuninisshu_076.jpg",
+    "imageWref": "Hyakuninisshu_076.jpg",
+    "kimariji": "わたのはら こ",
+    "nameKana": "ほつしょうじにゅうどうさきの かんぱくだいじょうだいじん",
+    "nameKanji": "法性寺入道前関白太政大臣",
+    "no": 76
+  },
+  {
+    "bodyKana": "せをはやみ いはにせかるる たきがはの われてもすゑに あはむとぞおもふ",
+    "bodyKanji": "瀬をはやみ 岩にせかるる 滝川の われても末に あはむとぞ思ふ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/e/e2/Hyakuninisshu_077.jpg",
+    "imageWref": "Hyakuninisshu_077.jpg",
+    "kimariji": "せ",
+    "nameKana": "すとくいん",
+    "nameKanji": "崇徳院",
+    "no": 77
+  },
+  {
+    "bodyKana": "あはぢしま かよふちどりの なくこゑに いくよねざめぬ すまのせきもり",
+    "bodyKanji": "淡路島 かよふ千鳥の 鳴く声に 幾夜ねざめぬ 須磨の関守",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/b/bf/Hyakuninisshu_078.jpg",
+    "imageWref": "Hyakuninisshu_078.jpg",
+    "kimariji": "あはぢ",
+    "nameKana": "みなもとのかねまさ",
+    "nameKanji": "源兼昌",
+    "no": 78
+  },
+  {
+    "bodyKana": "あきかぜに たなびくくもの たえまより もれいづるつきの かげのさやけさ",
+    "bodyKanji": "秋風に たなびく雲の たえ間より もれいづる月の 影のさやけさ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/1/1d/Hyakuninisshu_079.jpg",
+    "imageWref": "Hyakuninisshu_079.jpg",
+    "kimariji": "あきか",
+    "nameKana": "さきょうのだいぶあきすけ",
+    "nameKanji": "左京大夫顕輔",
+    "no": 79
+  },
+  {
+    "bodyKana": "ながからむ こころもしらず くろかみの みだれてけさは ものをこそおもへ",
+    "bodyKanji": "長からむ 心もしらず 黒髪の みだれてけさは 物をこそ思へ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/f/f9/Hyakuninisshu_080.jpg",
+    "imageWref": "Hyakuninisshu_080.jpg",
+    "kimariji": "ながか",
+    "nameKana": "たいけんもんいんほりかわ",
+    "nameKanji": "待賢門院堀河",
+    "no": 80
+  },
+  {
+    "bodyKana": "ほととぎす なきつるかたを ながむれば ただありあけの つきぞのこれる",
+    "bodyKanji": "ほととぎす 鳴きつる方を ながむれば ただありあけの 月ぞ残れる",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/da/Hyakuninisshu_081.jpg",
+    "imageWref": "Hyakuninisshu_081.jpg",
+    "kimariji": "ほ",
+    "nameKana": "ごとくだいじさだいじん",
+    "nameKanji": "後徳大寺左大臣",
+    "no": 81
+  },
+  {
+    "bodyKana": "おもひわび さてもいのちは あるものを うきにたへぬは なみだなりけり",
+    "bodyKanji": "思ひわび さてもいのちは あるものを 憂きにたへぬは 涙なりけり",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/f/f2/Hyakuninisshu_082.jpg",
+    "imageWref": "Hyakuninisshu_082.jpg",
+    "kimariji": "おも",
+    "nameKana": "どういんほうし",
+    "nameKanji": "道因法師",
+    "no": 82
+  },
+  {
+    "bodyKana": "よのなかよ みちこそなけれ おもひいる やまのおくにも しかぞなくなる",
+    "bodyKanji": "世の中よ 道こそなけれ 思ひ入る 山の奥にも 鹿ぞ鳴くなる",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/b/be/Hyakuninisshu_083.jpg",
+    "imageWref": "Hyakuninisshu_083.jpg",
+    "kimariji": "よのなかよ",
+    "nameKana": "こうたいごうぐうのだいぶしゅんぜい",
+    "nameKanji": "皇太后宮大夫俊成",
+    "no": 83
+  },
+  {
+    "bodyKana": "ながらへば またこのごろや しのばれむ うしとみしよぞ いまはこひしき",
+    "bodyKanji": "ながらへば またこのごろや しのばれむ 憂しと見し世ぞ 今は恋しき",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/0/05/Hyakuninisshu_084.jpg",
+    "imageWref": "Hyakuninisshu_084.jpg",
+    "kimariji": "ながら",
+    "nameKana": "ふじわらのきよすけあそん",
+    "nameKanji": "藤原清輔朝臣",
+    "no": 84
+  },
+  {
+    "bodyKana": "よもすがら ものおもふころは あけやらで ねやのひまさへ つれなかりけり",
+    "bodyKanji": "夜もすがら 物思ふころは 明けやらで 閨のひまさへ つれなかりけり",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/0/06/Hyakuninisshu_085.jpg",
+    "imageWref": "Hyakuninisshu_085.jpg",
+    "kimariji": "よも",
+    "nameKana": "しゅんえほうし",
+    "nameKanji": "俊恵法師",
+    "no": 85
+  },
+  {
+    "bodyKana": "なげけとて つきやはものを おもはする かこちがほなる わがなみだかな",
+    "bodyKanji": "なげけとて 月やは物を 思はする かこち顔なる わが涙かな",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/6/61/Hyakuninisshu_086.jpg",
+    "imageWref": "Hyakuninisshu_086.jpg",
+    "kimariji": "なげけ",
+    "nameKana": "さいぎょうほうし",
+    "nameKanji": "西行法師",
+    "no": 86
+  },
+  {
+    "bodyKana": "むらさめの つゆもまだひぬ まきのはに きりたちのぼる あきのゆふぐれ",
+    "bodyKanji": "村雨の 露もまだひぬ まきの葉に 霧たちのぼる 秋の夕ぐれ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/9/9f/Hyakuninisshu_087.jpg",
+    "imageWref": "Hyakuninisshu_087.jpg",
+    "kimariji": "む",
+    "nameKana": "じゃくれんほうし",
+    "nameKanji": "寂蓮法師",
+    "no": 87
+  },
+  {
+    "bodyKana": "なにはえの あしのかりねの ひとよゆゑ みをつくしてや こひわたるべき",
+    "bodyKanji": "難波江の 蘆のかりねの ひとよゆゑ みをつくしてや 恋ひわたるべき",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/4/4c/Hyakuninisshu_088.jpg",
+    "imageWref": "Hyakuninisshu_088.jpg",
+    "kimariji": "なにはえ",
+    "nameKana": "こうかもんいんのべつとう",
+    "nameKanji": "皇嘉門院別当",
+    "no": 88
+  },
+  {
+    "bodyKana": "たまのをよ たえなばたえね ながらへば しのぶることの よわりもぞする",
+    "bodyKanji": "玉の緒よ たえなばたえね ながらへば 忍ぶることの 弱りもぞする",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/b/b1/Hyakuninisshu_089.jpg",
+    "imageWref": "Hyakuninisshu_089.jpg",
+    "kimariji": "たま",
+    "nameKana": "しきしないしんのう",
+    "nameKanji": "式子内親王",
+    "no": 89
+  },
+  {
+    "bodyKana": "みせばやな をじまのあまの そでだにも ぬれにぞぬれし いろはかはらず",
+    "bodyKanji": "見せばやな 雄島のあまの 袖だにも ぬれにぞぬれし 色はかはらず",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/8/82/Hyakuninisshu_090.jpg",
+    "imageWref": "Hyakuninisshu_090.jpg",
+    "kimariji": "みせ",
+    "nameKana": "いんぶもんいんのたいふ",
+    "nameKanji": "殷富門院大輔",
+    "no": 90
+  },
+  {
+    "bodyKana": "きりぎりす なくやしもよの さむしろに ころもかたしき ひとりかもねむ",
+    "bodyKanji": "きりぎりす 鳴くや霜夜の さむしろに 衣かたしき ひとりかも寝む",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/c/c3/Hyakuninisshu_091.jpg",
+    "imageWref": "Hyakuninisshu_091.jpg",
+    "kimariji": "きり",
+    "nameKana": "ごきょうごくせっしょうさきのだいじょうだいじん",
+    "nameKanji": "後京極摂政前太政大臣",
+    "no": 91
+  },
+  {
+    "bodyKana": "わがそでは しほひにみえぬ おきのいしの ひとこそしらね かわくまもなし",
+    "bodyKanji": "わが袖は 潮干にみえぬ 沖の石の 人こそしらね かわくまもなし",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/d2/Hyakuninisshu_092.jpg",
+    "imageWref": "Hyakuninisshu_092.jpg",
+    "kimariji": "わがそ",
+    "nameKana": "にじょういんのさぬき",
+    "nameKanji": "二条院讃岐",
+    "no": 92
+  },
+  {
+    "bodyKana": "よのなかは つねにもがもな なぎさこぐ あまのをぶねの つなでかなしも",
+    "bodyKanji": "世の中は つねにもがもな なぎさこぐ あまの小舟の 綱手かなしも",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/f/f2/Hyakuninisshu_093.jpg",
+    "imageWref": "Hyakuninisshu_093.jpg",
+    "kimariji": "よのなかは",
+    "nameKana": "かまくらのうだいじん",
+    "nameKanji": "鎌倉右大臣",
+    "no": 93
+  },
+  {
+    "bodyKana": "みよしのの やまのあきかぜ さよふけて ふるさとさむく ころもうつなり",
+    "bodyKanji": "み吉野の 山の秋風 さ夜ふけて ふるさと寒く 衣うつなり",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/2/2f/Hyakuninisshu_094.jpg",
+    "imageWref": "Hyakuninisshu_094.jpg",
+    "kimariji": "みよ",
+    "nameKana": "さんぎまさつね",
+    "nameKanji": "参議雅経",
+    "no": 94
+  },
+  {
+    "bodyKana": "おほけなく うきよのたみに おほふかな わがたつそまに すみぞめのそで",
+    "bodyKanji": "おほけなく うき世の民に おほふかな わがたつ杣に 墨染の袖",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/a/a6/Hyakuninisshu_095.jpg",
+    "imageWref": "Hyakuninisshu_095.jpg",
+    "kimariji": "おほけ",
+    "nameKana": "さきのだいそうじょうじえん",
+    "nameKanji": "前大僧正慈円",
+    "no": 95
+  },
+  {
+    "bodyKana": "はなさそふ あらしのにはの ゆきならで ふりゆくものは わがみなりけり",
+    "bodyKanji": "花さそふ 嵐の庭の 雪ならで ふりゆくものは わが身なりけり",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/8/83/Hyakuninisshu_096.jpg",
+    "imageWref": "Hyakuninisshu_096.jpg",
+    "kimariji": "はなさ",
+    "nameKana": "にゅうどうさきのだいじょうだいじん",
+    "nameKanji": "入道前太政大臣",
+    "no": 96
+  },
+  {
+    "bodyKana": "こぬひとを まつほのうらの ゆふなぎに やくやもしほの みもこがれつつ",
+    "bodyKanji": "こぬ人を まつほの浦の 夕なぎに 焼くやもしほの 身もこがれつつ",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/c/cb/Hyakuninisshu_097.jpg",
+    "imageWref": "Hyakuninisshu_097.jpg",
+    "kimariji": "こぬ",
+    "nameKana": "ごんちゅうなごんていか",
+    "nameKanji": "権中納言定家",
+    "no": 97
+  },
+  {
+    "bodyKana": "かぜそよぐ ならのをがはの ゆふぐれは みそぎぞなつの しるしなりける",
+    "bodyKanji": "風そよぐ ならの小川の 夕ぐれは みそぎぞ夏の しるしなりける",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/0/00/Hyakuninisshu_098.jpg",
+    "imageWref": "Hyakuninisshu_098.jpg",
+    "kimariji": "かぜそ",
+    "nameKana": "じゅうにいいえたか",
+    "nameKanji": "従二位家隆",
+    "no": 98
+  },
+  {
+    "bodyKana": "ひともをし ひともうらめし あぢきなく よをおもふゆゑに ものおもふみは",
+    "bodyKanji": "人もをし 人もうらめし あぢきなく 世を思ふゆゑに 物思ふ身は",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/8/8c/Hyakuninisshu_099.jpg",
+    "imageWref": "Hyakuninisshu_099.jpg",
+    "kimariji": "ひとも",
+    "nameKana": "ごとばいん",
+    "nameKanji": "後鳥羽院",
+    "no": 99
+  },
+  {
+    "bodyKana": "ももしきや ふるきのきばの しのぶにも なほあまりある むかしなりけり",
+    "bodyKanji": "ももしきや ふるき軒ばの しのぶにも なほあまりある 昔なりけり",
+    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/f/ff/Hyakuninisshu_100.jpg",
+    "imageWref": "Hyakuninisshu_100.jpg",
+    "kimariji": "もも",
+    "nameKana": "じゅんとくいん",
+    "nameKanji": "順徳院",
+    "no": 100
+  }
+]
+
+export { hyakuninIsshuData };
