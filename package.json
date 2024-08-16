@@ -1,7 +1,7 @@
 {
   "name": "hyakunin-isshu",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple Node.js module that outputs random or specific poems from the classical Japanese anthology 'Hyakunin Isshu' to the console, including kanji, kana, and author information, with optional emoji decorations.",
   "main": "dist/index.js",
   "bin": {
     "hyakunin-isshu": "dist/index.js"
