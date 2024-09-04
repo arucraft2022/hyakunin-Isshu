@@ -106,6 +106,67 @@ To display help and see all available options, use the `--help` option.
 npx hyakunin-isshu --help
 ```
 
+## Docker
+
+You can also run the `hyakunin-isshu` package using Docker. This is useful if you prefer not to install Node.js and the package locally.
+
+### Build the Docker Image
+
+First, create a `Dockerfile` with the following content:
+
+```Dockerfile
+# Use Node.js v20 as the base image
+FROM node:20
+
+# Create and set the working directory inside the container
+WORKDIR /app
+
+# Install the `hyakunin-isshu` package globally
+RUN npm install -g hyakunin-isshu
+
+# Set the default command to execute `npx hyakunin-isshu`
+# This allows you to run `npx hyakunin-isshu` directly when you start the container
+ENTRYPOINT ["npx", "hyakunin-isshu"]
+```
+
+Then, build the Docker image:
+
+```bash
+docker build -t hyakunin-isshu-image .
+```
+
+### Run the Docker Container
+
+To display a random poem:
+
+```bash
+docker run --rm hyakunin-isshu-image
+```
+
+To display a specific poem by number:
+
+```bash
+docker run --rm hyakunin-isshu-image --no 1
+```
+
+To list all poems:
+
+```bash
+docker run --rm hyakunin-isshu-image --list
+```
+
+To list all poems in JSON format:
+
+```bash
+docker run --rm hyakunin-isshu-image --list --json
+```
+
+To search for poems by keyword:
+
+```bash
+docker run --rm hyakunin-isshu-image --search 月
+```
+
 ## License
 
 This project is licensed under the MIT License.
